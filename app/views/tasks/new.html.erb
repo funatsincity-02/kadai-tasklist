@@ -1,0 +1,13 @@
+<h1>タスク新規作成ページ　--New task create--</h1>
+
+<%= form_with(model: @task, local:true) do |f| %>
+
+<%= f.label :content, 'メッセージ' %>
+
+<%= f.text_field :content %>
+
+<%= f.submit '新規登録' %>
+
+<% end %>
+
+<%= link_to '一覧に戻る', tasks_path %>
