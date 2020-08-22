@@ -1,5 +1,11 @@
 <h1>タスク新規作成ページ　--New task create--</h1>
 
+<%= render 'form', task: @task %>
+
+<%
+=begin
+%>
+
 <%= form_with(model: @task, local:true) do |f| %>
 
 <%= f.label :content, 'タスク' %>
@@ -9,5 +15,11 @@
 <%= f.submit '新規登録' %>
 
 <% end %>
+
+<%
+=end
+%>
+
+
 
 <%= link_to '一覧に戻る', tasks_path %>
