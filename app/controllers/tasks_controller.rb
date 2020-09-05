@@ -21,7 +21,8 @@ class TasksController < ApplicationController
     else
       @tasks = current_user.tasks.order(id: :desc).page(params[:page])
       flash.now[:danger] = 'タスクは登録できませんでした'
-      render 'toppages/index'
+      render 'tasks/index'
+      
     end
   end
 
