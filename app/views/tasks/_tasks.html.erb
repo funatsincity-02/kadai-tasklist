@@ -1,0 +1,26 @@
+
+  <h4>　ここは「_tasks.html.erb」の読み込み部分 </h4>
+  
+  <li class="media mb-3">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="text-center">ユーザー</th>
+            <th class="text-center">コンテンツ</th>
+            <th class="text-center">ステータス</th>
+          </tr>
+        </thead>
+  
+        <% tasks.each do |task| %>
+        
+        <tboby>
+          <tr>
+            <td class="text-center"><%= task.user.name %></td>
+            <td class="text-center"><%= link_to task.content, task_path(task) %></td>
+            <td class="text-center"><%= task.status %></td>
+            <% end %>  
+          </tr>
+        </tboby>
+      </table>  
+  </li>
+

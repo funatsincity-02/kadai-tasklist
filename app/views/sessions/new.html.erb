@@ -1,0 +1,33 @@
+
+<h2>タスクリスト　　ログイン画面</h2>
+
+
+<div class="row">
+
+
+    <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
+
+    <div>
+      <%= f.label :email, 'メールアドレス' %>
+      <%= f.email_field :email %>
+    </div>  
+
+    <div>
+      <%= f.label :password, 'ログインパスワード' %>
+      <%= f.password_field :password %>
+    </div>
+
+    <div>
+    <%= f.submit 'ログイン' %>
+    </div>
+
+    <div>
+    <p> <%= link_to '新規ユーザー登録はこちら', signup_path %></p>
+    </div>
+
+
+    
+    <% end %>
+    
+
+</div>
