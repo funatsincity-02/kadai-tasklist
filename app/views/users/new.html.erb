@@ -1,6 +1,9 @@
 <h1>ユーザー新規作成</h1>
 
 <%= form_with(model: @user, local: true) do |f| %>
+
+  <%= render 'layouts/error_messages', model: f.object %>
+
   <div>
   <%= f.label :name, 'ユーザー名' %>
   <%= f.text_field :name %>
@@ -8,7 +11,7 @@
   
   <div>
   <%= f.label :email, 'メールアドレス' %>
-  <%= f.text_field :email %>
+  <%= f.email_field :email %>
   </div>
   
   <div>  

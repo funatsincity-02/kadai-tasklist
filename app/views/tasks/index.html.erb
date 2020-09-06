@@ -1,20 +1,40 @@
 
-<% if logged_in? %>
-
 <h1>タスク一覧</h1>
 
 
 <% if @tasks.any? %>
 
       <% @tasks.each do |task| %>
-      
-        <%= link_to task.id, task %>　：　<%= task.content %>　＞　<%= task.status %>
-      
+      <div>
+        <p><%= link_to task.id, task %>　：　<%= task.content %>　＞　<%= task.status %></p>
+      </div>
       <% end %>
 
-  <div>
+  
+  <% end %>
+  <%= link_to '新規タスクの投稿', new_task_path %>
 
-  </div>
+
+
+<%
+=begin
+%>
+-------------------------------------
+if logged_in? を付けている
+
+<% if logged_in? %>
+<h1>タスク一覧</h1>
+
+
+<% if @tasks.any? %>
+
+      <% @tasks.each do |task| %>
+      <div>
+        <p><%= link_to task.id, task %>　：　<%= task.content %>　＞　<%= task.status %></p>
+      </div>
+      <% end %>
+
+  
   <% end %>
   <%= link_to '新規タスクの投稿', new_task_path %>
 
@@ -26,4 +46,6 @@
 
 <% end %>
   
-
+<%
+=end
+%>
